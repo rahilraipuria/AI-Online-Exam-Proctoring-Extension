@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Socket.IO Chrome Extension",
-    "version": "1.0",
+    "version": "1.1",
     "background": {
     "service_worker": "background.js"
   },
@@ -12,7 +12,8 @@
     ],
     "host_permissions": [
       "http://localhost:3000/*",
-      "https://www.example.com/*"
+      "https://www.example.com/*",
+      "https://www.programiz.com/*"
     ],
     "content_security_policy": {
       
@@ -22,7 +23,7 @@
     },
     "content_scripts": [
       {
-        "matches": ["https://www.example.com/*"],
+        "matches": ["https://www.example.com/*","https://www.programiz.com/*"],
         "js": ["dist/content.bundle.js"]
       }
     ],
